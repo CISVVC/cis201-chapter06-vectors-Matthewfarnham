@@ -1,0 +1,42 @@
+#include<iostream>
+#include "transaction.h"
+#include<string>
+
+using namespace std;
+
+Transaction::Transaction()
+{
+    m_day = 0;
+    m_amount = 0;
+    m_description = "Undefined";
+}
+
+Transaction::Transaction(int day,double amount,std::string description)
+{
+    m_day = day;
+    m_amount = amount;
+    m_description = description;
+}
+
+void Transaction::read()
+{
+    string substr = "";
+    string str;
+    getline(cin,str);
+    int i = 0;
+
+    while (str[i] != ' ')
+    {
+        substr += str[i] ;
+        ++i;
+    }
+    m_day = stoi(substr);
+   
+    substr = "";
+    {
+    while (str[i] != ' ')
+    ++i;
+    }
+    m_amount = stod(substr);
+    
+}
