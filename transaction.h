@@ -2,6 +2,7 @@
 #define TRANSACTION_H
 #include<string>
 
+//Class definition for Transaction used in transaction.cpp
 class Transaction
 {
     int m_day;

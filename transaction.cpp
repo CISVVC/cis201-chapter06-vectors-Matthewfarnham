@@ -28,6 +28,7 @@ string Transaction::to_string()
     return (day + " " + amount + " " +  m_description);
 }
 
+//Read function for Transaction
 void Transaction::read()
 {
     string substr = "";
@@ -59,11 +60,13 @@ void Transaction::read()
     m_description = substr;
 }
 
+//Declaraction for get_day
 double Transaction::get_day()
 {
     return m_day;
 }
 
+//Declaration for get_amount
 double Transaction::get_amount()
 {
     return m_amount;

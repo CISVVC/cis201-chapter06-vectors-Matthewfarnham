@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//Class definition for transactionlog used in transactionlog.cpp
 class Transactionlog
 {
     std::vector<Transaction> m_transaction;

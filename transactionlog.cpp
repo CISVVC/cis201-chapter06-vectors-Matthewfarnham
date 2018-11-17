@@ -10,6 +10,8 @@ void Transactionlog::add(const Transaction &t)
     m_transaction.push_back(t);
 }
 
+//Print function for Transactionlog that prints the each transaction as a bank
+//statement and the daily balance for each day
 void Transactionlog::print()
 {
     vector<double> balances = get_daily_balances();
@@ -27,6 +29,7 @@ void Transactionlog::print()
     print_interest();
 }
 
+//Read fucntion for transactionlog
 void Transactionlog::read()
 {
     Transaction t;
@@ -37,6 +40,7 @@ void Transactionlog::read()
     }
 }
 
+//Function that gets total of transactions and returns the total
 double Transactionlog::get_total(int daynum)
 {
     double total = 0.0;
@@ -49,6 +53,7 @@ double Transactionlog::get_total(int daynum)
     return total;
 }
 
+//Fuction that gets the daily balance for each day
 vector<double> Transactionlog::get_daily_balances()
 {
     vector<double> daily_balances;
@@ -61,6 +66,8 @@ vector<double> Transactionlog::get_daily_balances()
     return daily_balances;
 }
 
+//Print function that both calculates and prints the average daily balance, minimum daily 
+//balance, and the interest of both
 void Transactionlog::print_interest()
 {
     vector<double> balances = get_daily_balances();
